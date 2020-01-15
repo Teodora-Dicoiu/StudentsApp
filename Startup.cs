@@ -16,6 +16,7 @@ namespace StudentsAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IStudentsService, StudentsService>();
+            services.AddSingleton<IRequestService, RequestService>();
             services.AddControllers().AddXmlSerializerFormatters();
             services.AddScoped<EventsFilter>();
         }
